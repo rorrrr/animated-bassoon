@@ -1,0 +1,35 @@
+<h1>Change Student Data</h1>
+
+
+<form action="/students/<%= @pizza.id %>" method="post">
+
+  <label>
+  First name:
+    <input type="text" name="first_name" value="<%= @pizza.first_name %>"/>
+  
+  </label>
+
+
+  <label>
+  Last name:
+    <input type="text" name="last_name" value="<%= @pizza.last_name %>"/>
+  </label>
+
+
+  <label>
+  Choose House:
+    <select name="house">
+      <option <%= "selected" if @student.topping == "Red" %> value="Red">Red</option>
+      <option <%= "selected" if @student.topping == "Blue" %> value="Blue">Blue</option>
+      <option <%= "selected" if @student.topping == "Green" %> value="Green">Green</option>
+    </select>
+  </label>
+
+  <label>
+  Quantity:
+    <input type="number" name="age" value="<%= @pizza.age %>"/>
+  </label>
+
+  <input type="submit" value="Update Student"/>
+
+</form>
