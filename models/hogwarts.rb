@@ -56,7 +56,8 @@ class Student
   def house()
     sql = "SELECT houses.* from houses
     WHERE id = #{@house_id}"
-    return SqlRunner.run( sql ).first
+    result = SqlRunner.run( sql ).first
+    return result["name"]
   end
 
   # def count_tickets
