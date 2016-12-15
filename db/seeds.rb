@@ -1,23 +1,7 @@
-require_relative('../models/hogwarts')
 require_relative('../models/houses')
+require_relative('../models/hogwarts')
 
-student1 = Student.new({
-  "first_name" => "Harry",
-  "last_name" => "Potter",
-  "house" => house1.name,
-  "age" => 19
-})
-
-student2 = Student.new({
-  "first_name" => "Fergie",
-  "last_name" => "Ferg",
-  "house" => house2.name,
-  "age" => 20
-})
-
-student1.save
-student2.save
-
+require ('pry')
 
 house1 = House.new({
   "name" => "Red",
@@ -37,3 +21,24 @@ house3 = House.new({
 house1.save
 house2.save
 house3.save
+
+
+student1 = Student.new({
+  "first_name" => "Harry",
+  "last_name" => "Potter",
+  "house_id" => house1.id,
+  "age" => 19
+})
+
+student2 = Student.new({
+  "first_name" => "Fergie",
+  "last_name" => "Ferg",
+  "house_id" => house2.id,
+  "age" => 20
+})
+
+student1.save
+student2.save
+
+binding.pry
+nil

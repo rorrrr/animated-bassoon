@@ -1,6 +1,11 @@
 DROP TABLE students;
 DROP TABLE houses;
 
+CREATE TABLE houses (
+  id serial4 primary key,
+  name varchar(255),
+  logo varchar(255)
+);
 
 CREATE TABLE students (
   id serial4 primary key,
@@ -9,9 +14,3 @@ CREATE TABLE students (
   house_id INT2 references houses(id),
   age INT2
 );
-
-CREATE TABLE houses (
-  id serial4 primary key,
-  name varchar(255),
-  logo varchar(255)
-)
